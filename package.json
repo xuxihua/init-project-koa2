@@ -1,0 +1,24 @@
+{
+  "name": "xixi_customize_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/app.js"
+  },
+  "author": "xxh",
+  "license": "ISC",
+  "dependencies": {
+    "ip": "^1.1.5",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-nunjucks-2": "^3.0.2",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
+    "log4js": "^6.2.0",
+    "mongoose": "^5.9.9",
+    "nodemon": "^2.0.3",
+    "nunjucks": "^3.2.1"
+  }
+}
