@@ -1,11 +1,35 @@
+/*
+ * @Descripttion: 
+ * @Author: xxh
+ * @Date: 2020-11-05 17:26:42
+ * @LastEditors: xxh
+ * @LastEditTime: 2020-11-06 11:00:22
+ */
 const path = require('path')
 const ip = require('ip')
 const miSend = require('./mi-send')
 const miLog = require('./mi-log')
 const miHttpError = require('./mi-http-error')
+const cors = require("koa2-cors")
 // 引入规则中件间
 const miRule = require('./mi-rule')
 module.exports = (app) => {
+  // 设置跨域
+  app.use(
+    cors({
+      origin: function (ctx) {
+        // if (ctx.url === '/test') {
+        //     return "*"; // 允许来自所有域名请求
+        // }
+        return 'http://localhost:3000' // 只允许该域名的请求通过了
+      },
+      exposeHeaders: ["WWW-Authenticate", "Server-Authorization"],
+      maxAge: 5,
+      credentials: true,
+      allowMethods: ["GET", "POST", "DELETE"],
+      allowHeaders: ["Content-Type", "Authorization", "Accept"],
+    })
+  )
   /**
    * 在接口的开头调用
    * 指定 controller 文件夹下的 js 文件，挂载在 app.controller 属性

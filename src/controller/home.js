@@ -1,9 +1,22 @@
+/*
+ * @Descripttion: 
+ * @Author: xxh
+ * @Date: 2020-11-05 17:26:42
+ * @LastEditors: xxh
+ * @LastEditTime: 2020-11-05 18:17:48
+ */
 module.exports = {
   index: async(ctx, next) => {
-    await ctx.render("home/index", {title: "嘻嘻订制欢迎您"})
+    await ctx.render("home/index", {title: "koa2服务启动"})
   },
   home: async(ctx, next) => {
-    ctx.response.body = '<h1>HOME page</h1>'
+    ctx.response.body = {
+      code: 1,
+      data: {
+        message: '测试成功'
+      },
+      msg: null
+    }
   },
   homeParams: async(ctx, next) => {
     ctx.response.body = '<h1>HOME page /:id/:name</h1>'

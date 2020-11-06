@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: 
+ * @Author: xxh
+ * @Date: 2020-11-05 17:26:42
+ * @LastEditors: xxh
+ * @LastEditTime: 2020-11-05 18:13:05
+ */
 const Koa = require('koa')
 const path = require('path')
 const bodyParser = require('koa-bodyparser')
@@ -30,6 +37,6 @@ app.use(bodyParser())
 // 引入路由
 router(app)
 
-app.listen(3000, () => {
-  console.log('server is running at http://localhost:3000')
+app.listen(5000, () => {
+  console.log('server is running at http://localhost:5000')
 })

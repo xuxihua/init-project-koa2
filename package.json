@@ -16,6 +16,7 @@
     "koa-nunjucks-2": "^3.0.2",
     "koa-router": "^8.0.8",
     "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
     "log4js": "^6.2.0",
     "mongoose": "^5.9.9",
     "nodemon": "^2.0.3",
